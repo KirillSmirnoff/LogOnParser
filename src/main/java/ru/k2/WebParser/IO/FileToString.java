@@ -1,4 +1,4 @@
-package IO;
+package ru.k2.WebParser.IO;
 
 import java.io.File;
 import java.io.FileInputStream;

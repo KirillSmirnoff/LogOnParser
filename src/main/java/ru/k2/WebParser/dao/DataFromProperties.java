@@ -1,4 +1,4 @@
-package dao;
+package ru.k2.WebParser.dao;
 
 import java.io.*;
 import java.util.Properties;

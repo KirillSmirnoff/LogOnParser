@@ -1,11 +1,11 @@
-package XML;
+package ru.k2.WebParser.XML;
 
-import dao.DataBase;
+import ru.k2.WebParser.dao.DataBase;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-/*Парсинг XML*/
+/*Парсинг ru.k2.WebParser.XML*/
 public class XmlHandler extends DefaultHandler {
 
     private String currentElement = null;
