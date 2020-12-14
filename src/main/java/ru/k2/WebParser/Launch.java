@@ -1,8 +1,10 @@
 import JSON.JsonHandler;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.File;
 import java.io.IOException;
 
+@SpringBootApplication
 public class Launch {
 
 //    public static final String UriString = "/home/k2/Desktop/Onelya/docs/P62G62_test_answerExample.xml";
