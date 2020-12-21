@@ -1,8 +1,5 @@
 package ru.k2.WebParser.domain;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class InputData {
     String data;
 

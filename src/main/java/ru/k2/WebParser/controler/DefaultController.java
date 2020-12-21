@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.k2.WebParser.JSON.JsonHandler;
 import ru.k2.WebParser.domain.InputData;
+import ru.k2.WebParser.domain.ResultData;
 
 @Controller
 public class DefaultController {
@@ -25,14 +26,18 @@ public class DefaultController {
     }
 
     @PostMapping("/")
-    public String postFormatFromInput(InputData data){
-        System.out.println(jsonHandler.webConverter(data.getData()));
-        return "redirect:result";
-    }
+    public String postFormatFromInput(InputData data, Model model){
+        String s = jsonHandler.webConverter(data.getData());
+        ResultData res = new ResultData();
+        res.setResult(s);
+        model.addAttribute("res", res);
 
-    @GetMapping("/result")
-    public String resultInput(Model model){
-//        model.addAttribute(new InputData());
         return "result";
     }
+
+//    @GetMapping("/result")
+//    public String resultInput(Model model){
+////        model.addAttribute(new InputData());
+//        return "result";
+//    }
 }
