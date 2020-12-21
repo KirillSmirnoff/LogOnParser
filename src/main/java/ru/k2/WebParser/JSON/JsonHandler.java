@@ -166,18 +166,19 @@ public class JsonHandler {
                         finalIndex = startIndex + 1;
                     } else
                         finalIndex = startIndex + parser.getText().length();
+
+                    /* БЛОК ОТВЕЧАЮШИЙ ЗА ПОИСК ТЕГА В БД ИЛИ БАЗЕ-ЗНАНИЙ(ФАЙЛ) */
+
+                    /* метод считывает значение тега-xml из БД */
+                    //sb.replace(startIndex,finalIndex, dataBase.getFromDB(parser.getText()));
+
+                    /*метод считывает значения тега-xml из БазыЗнаний(файл)*/
+                    String property = properties.getProperty(tagName);
+                    sb.replace(startIndex, finalIndex, property);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            /* БЛОК ОТВЕЧАЮШИЙ ЗА ПОИСК ТЕГА В БД ИЛИ БАЗЕ-ЗНАНИЙ(ФАЙЛ) */
-
-            /* метод считывает значение тега-xml из БД */
-            //sb.replace(startIndex,finalIndex, dataBase.getFromDB(parser.getText()));
-
-            /*метод считывает значения тега-xml из БазыЗнаний(файл)*/
-//            String property = properties.getProperty(tagName);
-            sb.replace(startIndex, finalIndex, "станция");
 
                 /*тестовая реализация для проверки ru.k2.WebParser.JSON заголовков
 //            if (jsonToken != null && (jsonToken.equals(VALUE_STRING) || jsonToken.equals(VALUE_NUMBER_INT) || jsonToken.equals(VALUE_NUMBER_FLOAT))) {
