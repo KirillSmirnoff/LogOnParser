@@ -1,4 +1,4 @@
-package ru.k2.WebParser.dao;
+package ru.k2.WebParser.domain;
 
 public class Tag {
     private String tag;

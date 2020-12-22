@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import ru.k2.WebParser.JSON.JsonHandler;
 import ru.k2.WebParser.dao.DataFromProperties;
-import ru.k2.WebParser.dao.Tag;
+import ru.k2.WebParser.domain.Tag;
 import ru.k2.WebParser.domain.InputData;
 import ru.k2.WebParser.domain.ResultData;
 
@@ -53,7 +53,7 @@ public class DefaultController {
     @PostMapping("/add")
     @ResponseBody
     public String resultInput(Tag tag, Model model){
-        dataFromProperties.addTag(tag);
+//        dataFromProperties.addTag(tag);
         return "Ok";
     }
 }
