@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th = "www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Добавление тегов</p>
+<form action="/add" th:action="@{/add}" method="post" th:object="${tag}">
+    <label for="tag">Тег</label>
+    <input type="text" th:field="*{tag}" id="tag">
+    <label for="mean">Значение</label>
+    <input type="text" th:field="*{means}" id="mean">
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>
